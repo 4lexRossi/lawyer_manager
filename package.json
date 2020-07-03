@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.config.js",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,7 +24,6 @@
     "@angular/router": "~9.1.11",
     "@types/datatables.net": "^1.10.19",
     "@types/jquery": "^3.5.0",
-    "angular": "^1.8.0",
     "angular-datatables": "^9.0.2",
     "datatables.net": "^1.10.21",
     "datatables.net-dt": "^1.10.21",
