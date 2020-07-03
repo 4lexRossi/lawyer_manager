@@ -1,0 +1,51 @@
+<app-cabecalho></app-cabecalho>
+
+  <div style="background-color: #0D0C3B ; margin-right: 5%;" class="card-header text-center">
+  <h4 style="color: #9dbbae;"> Cadastrar processo</h4>
+</div> <br>
+
+<div  class="b">
+  <form [formGroup]="ProcessoForm">
+
+    <div class="form-row f">
+      <div class="form-group col-md-6">
+        <label>Nome do cliente</label>
+        <div class="input-group">
+          <select formControlName="nomeCliente" class="form-control"  >
+            <option value="" selected disabled></option>
+              <option *ngFor="let cliente of clientes" [value]="cliente.nome +' ' + cliente.sobreNome" >
+                {{cliente.nome+ " "}}{{cliente.sobreNome}}
+            </option>
+        </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Data da decisão</label>
+        <input formControlName="dataDecisao" type="date" data-inputmask-alias="datetime" data-inputmask-inputformat="dd-mm-yyyy" data-mask class="form-control" id="dataDecisao" >
+      </div>
+      <div class="form-group col-md-6">
+        <label>Link do processo</label>
+        <input formControlName="linkProcesso" type="text" class="form-control" id="linkProcesso" placeholder="https://www.link.com.br/">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Descrição</label>
+      <textarea formControlName="descricao" class="form-control" id="descricao" placeholder="Análise do processo" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Próxima etapa</label>
+      <textarea formControlName="proximoPasso" class="form-control" id="proximoPasso" rows="3"></textarea>
+    </div>
+    <div class="card-footer">
+      <button (click)="salvar()" type="submit"  style="background-color: #ffbd4a; font-weight: bolder;" class="btn btn-warning float-right">Concluído</button>
+    </div>
+
+  </form>
+</div>
+
+

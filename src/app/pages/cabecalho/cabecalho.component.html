@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0A092f;" >
+  <a class="navbar-brand" href="index.html">
+    <img src="../../../assets/img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""> DIO PROCESS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+        <li *ngIf="tipoUsuario === 1" class="nav-item">
+          <a [routerLink]="['/processo']" class="nav-link" >
+            Cadastrar
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink]="['/processos']" class="nav-link" >
+            Consultar
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav justify-content-md">
+        <li class="nav-item">
+          <h6>Bem vindo: <a style="color: inherit;" [routerLink]="['/usuario/user', usuario.id]" >{{usuario.nome + " "}} {{usuario.sobreNome}}</a></h6>
+         </li>
+      </ul>
+
+      <ul class="nav justify-content-end p">
+        <li class="nav-item">
+          <a [routerLink] class="sair" (click)="Logout()" ><i class="icon-logout"></i></a>
+        </li>
+      </ul>
+  </div>
+</nav>
