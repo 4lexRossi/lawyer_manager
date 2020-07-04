@@ -11,7 +11,8 @@
                 <th>Número</th>
                 <th>Cliente</th>
                 <th>Descrição</th>
-                <th>Data</th>
+                <th>Proxima Etapa</th>
+                <th>Data</th>                
                 <th *ngIf="tipoUsuario === 1"  >Ações</th>
               </tr>
             </thead>
@@ -21,6 +22,7 @@
                 <td>{{processo.numProcesso}}</td>
                 <td>{{processo.nomeCliente}}</td>
                 <td>{{processo.descricao}}</td>
+                <td>{{processo.proximoPasso}}</td>
                 <td>{{processo.dataDecisao | date: 'dd/MM/yyyy' }}</td>
                 <td *ngIf="tipoUsuario === 1" class="colIcons">
                 <span type="button" [routerLink]="['/processo', processo.id]" class="btn btn-outline-info"><i class="icon-pencil"></i></span>&nbsp;&nbsp;
