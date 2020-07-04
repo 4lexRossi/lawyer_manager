@@ -1,5 +1,3 @@
-# Projeto de “Cadastro de usuário e envio de e-mail de confirmação de cadastro como tarefa em background utilizando Node.js
-
 <h1 align="center">Uma aplicação completa de agenda de Advogado e Controle de clientes e Processos</h1>
 
 Esse repo é um projeto incrível da DioX Squad 1
