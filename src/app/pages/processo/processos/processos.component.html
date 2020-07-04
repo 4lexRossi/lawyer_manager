@@ -8,7 +8,7 @@
         [dtOptions]="dtOptionsProcesso" [dtTrigger]="dtTriggerProcesso">
             <thead>
               <tr style="color: #EAB562 ;" class="bg-warning text-center" >
-                <th>Número</th>
+                <th>link do Processo</th>
                 <th>Cliente</th>
                 <th>Descrição</th>
                 <th>Proximo Passo</th>
@@ -19,7 +19,7 @@
 
             <tbody>
               <tr class="text-center" *ngFor="let processo of processos">
-                <td>{{processo.numProcesso}}</td>
+                <td><a href="{{processo.linkProcesso}}">{{processo.linkProcesso}}</a></td>
                 <td>{{processo.nomeCliente}}</td>
                 <td>{{processo.descricao}}</td>
                 <td>{{processo.proximoPasso}}</td>
